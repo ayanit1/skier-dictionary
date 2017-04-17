@@ -25,8 +25,10 @@ app.use(function(req, res, next) {
 
 app.use(express.static("./public"));
 
+// allows us to use api on different domains
 app.use(cors());
 
+// api request
 app.get("/dictionary-api", function(req, res){
 	res.json(skierTerms);
 });
